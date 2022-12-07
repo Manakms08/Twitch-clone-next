@@ -116,7 +116,7 @@ const Navbar = () => {
        <div className='hidden md:flex grow items-center justify-end'>
         {session ? (
           <div>
-           <Link href='/account'>
+           <Link href='/Account'>
             <div className='flex items-center'>
               <p className='pr-4 cursor-pointer'>
                 Welcome, {session.user.name}
@@ -159,7 +159,7 @@ const Navbar = () => {
                   <Menu.Item>
                     {({ active }) => (
                       <Link
-                        href='/account'
+                        href='/Account'
                         className={classNames(
                           active
                             ? 'bg-gray-500 text-gray-100'
@@ -194,7 +194,7 @@ const Navbar = () => {
           )
         :(
           <div className='flex items-center'>
-          <Link href='/account'>
+          <Link href='/Account'>
             <button className='px-4 py-[6px] rounded-lg font-bold bg-[#9147ff] mr-2'>
                Account
             </button>
