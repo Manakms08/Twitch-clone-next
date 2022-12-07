@@ -6,7 +6,7 @@ import Video from './Video'
 
 const Main = () => {
   return (
-    <div className='absolute left-[64px] xl:left-[245px]'>
+    <div className='left-[64px] xl:left-[245px]'>
         <Video/>
         <LiveChannels />
         <IconBar/>

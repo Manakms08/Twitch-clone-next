@@ -5,7 +5,7 @@ import {BsDot} from 'react-icons/bs'
 import Image from 'next/image'
 const SideMenu = () => {
   return (
-    <div className='overflow-y-scroll sm: overflow-hidden w-14 sm:w-16 xl:w-[15rem] h-screen p-2 bg-[#0e0e10]'>
+    <div className='sticky top-[56px] h-screen xl:overflow-y-scroll overflow-hidden w-14 sm:w-16 xl:w-[15rem] p-2 bg-[#3B3B3B]'>
        <div>
         <p className='hidden xl:flex uppercase font-bold text-sm pb-4'>Recommended Channels</p>
         <p><RiMovieLine size={20} className='xl:hidden justify-center w-full'/></p>
@@ -26,7 +26,7 @@ const SideMenu = () => {
        ))}
        <div>
         <p className='hidden xl:flex uppercase font-bold text-sm py-4'>Top Channels</p>
-        <p><RiMovieLine size={20} className='xl:hidden justify-center w-full'/>
+        <p><RiMovieLine size={20} className='xl:hidden mt-3 justify-center w-full'/>
         </p>
        </div>
        {top_channels.map((item,index)=>(

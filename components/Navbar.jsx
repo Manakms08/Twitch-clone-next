@@ -21,7 +21,7 @@ const Navbar = () => {
   const { data: session } = useSession()
   
   return (
-    <div className='fixed h-14 w-full flex flex-nowrap items-center p-4 bg-[#0e0e10] mb-[2px] z-10'>
+    <div className='sticky top-0 h-14 w-full flex flex-nowrap items-center p-4 bg-[#3B3B3B] mb-[2px] z-10'>
        {/* Left Side */}
        <div className='flex grow items-center justify-start'>
         <Link href='/' className='flex'>
@@ -100,8 +100,9 @@ const Navbar = () => {
         </div>
        </div>
        {/* Middle */}
-       <div className='hidden md:flex grow-[2] items-center justify-center'>
-        <div className='bg-gray-500 text-white flex justify-between items-center max-w-[400px] w-full m-auto p-2 rounded-2xl'>
+      <div className='relative  flex-none'>
+       <div className='absolute hidden md:flex grow-[2] items-center justify-center -top-[20px] -left-[200px]'>
+        <div className='bg-gray-500 text-white flex justify-between items-center w-[400px] p-2 rounded-2xl'>
           <div>
             <input type="text" className='bg-transparent border-none text-white focus:outline-none'
               placeholder='Search'
@@ -112,13 +113,14 @@ const Navbar = () => {
           </div>
         </div>
        </div>
+      </div>
        {/* Right Side*/}
        <div className='hidden md:flex grow items-center justify-end'>
         {session ? (
-          <div>
+          <div className='w-full gap-x-2 flex justify-end items-center text-xl font-semibold'>
            <Link href='/Account'>
-            <div className='flex items-center'>
-              <p className='pr-4 cursor-pointer'>
+            <div className='flex items-center flex-row '>
+              <p className='pr-4 cursor-pointer capitalize'>
                 Welcome, {session.user.name}
               </p>
             </div>
