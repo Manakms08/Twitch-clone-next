@@ -143,7 +143,7 @@ const Navbar = () => {
                 <div className='py-1'>
                    <Menu.Item>
                     {({ active }) => (
-                      <a
+                      <Link
                         href='/'
                         className={classNames(
                           active
@@ -153,12 +153,12 @@ const Navbar = () => {
                         )}
                       >
                         Home
-                      </a>
+                      </Link>
                     )}
                    </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <a
+                      <Link
                         href='/account'
                         className={classNames(
                           active
@@ -168,7 +168,7 @@ const Navbar = () => {
                         )}
                       >
                         Account
-                      </a>
+                      </Link>
                     )}
                   </Menu.Item>
                   <Menu.Item>
