@@ -5,7 +5,7 @@ import Logo from '../public/assets/logo.png'
 import {Menu,Transition} from '@headlessui/react'
 import {BsPerson, BsSearch, BsThreeDotsVertical} from 'react-icons/bs'
 import {AiOutlineMenu,AiOutlineClose} from 'react-icons/ai'
-import {useSession,signIn,signOut} from 'next-auth/react'
+import {useSession,signOut} from 'next-auth/react'
 
 function classNames(...classes){
     return classes.filter(Boolean).join(' ')
