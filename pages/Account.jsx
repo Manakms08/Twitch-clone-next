@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { useSession, signIn, signOut } from "next-auth/react"
 import {FaGithub, FaGoogle} from 'react-icons/fa'
 import Image from 'next/image'
@@ -6,6 +7,7 @@ const Account = () => {
   const { data: session } = useSession()
   if (session) {
     return (
+      
       <div className='pt-[100px] flex flex-col max-w-[400px] w-full mx-auto p-4'>
         <h2 className='text-2xl font-bold'>Welcome, {session.user.name}</h2>
         <p className='py-4'>Signed in as {session.user.email}</p>
@@ -13,6 +15,13 @@ const Account = () => {
          <Image src={session.user.image} className='rounded-full' alt="/" width='100' height='100'/>
         </div>
         <button className='flex items-center justify-center p-3 bg-gray-600 border border-gray-600 mt-4'  onClick={() => signOut()}>Sign out</button>
+        <div className='text-2xl font-bold text-white mt-4 pl-[90px]'>
+          <Link href='/'>
+            <button className='px-4 py-[6px] rounded-lg font-bold bg-[#9147ff]  mr-2'>
+               Go to Home
+            </button>
+          </Link>
+        </div>
       </div>
     )
   }
